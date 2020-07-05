@@ -25,7 +25,7 @@ function resetGame() {
   keywordsDisplayed = 0;
 
   forwardButton.style.backgroundColor = activeButtonColour;
-  form.style.display = "block";
+  startArea.style.display = "block";
   controls.style.display = "none";
   playArea.style.display = "none";
   revealArea.style.display = "none";
@@ -33,7 +33,7 @@ function resetGame() {
 }
 
 function showPlayArea() {
-  form.style.display = "none";
+  startArea.style.display = "none";
   controls.style.display = "block";
   playArea.style.display = "block";
   revealArea.style.display = "block";
@@ -84,6 +84,7 @@ const submitButton = document.getElementById('submitButton');
 const forwardButton = document.getElementById('forwardButton');
 const revealButton = document.getElementById('revealButton');
 const playArea = document.getElementById('playArea');
+const startArea = document.getElementById('startArea');
 const revealArea = document.getElementById('revealArea');
 const keywords = document.getElementById('keywordsField');
 const log = document.getElementById('log');
