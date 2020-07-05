@@ -39,6 +39,7 @@ h1 {
         font-size: 5vh;
         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         font-family: Helvetica;
+        text-align: center;
 }
 
 .backText {
