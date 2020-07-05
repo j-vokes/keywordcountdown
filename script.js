@@ -11,6 +11,8 @@ function logSubmit(event) {
     playArea.appendChild(keywordField);
   }
 
+  filmReveal.innerHTML = filmName;
+  filmReveal.style.visibility = "hidden";
   showPlayArea();
 }
 
@@ -26,13 +28,15 @@ function resetGame() {
   form.style.display = "block";
   controls.style.display = "none";
   playArea.style.display = "none";
-  revealArea.style.display = "none"
+  revealArea.style.display = "none";
+  revealArea.classList.remove("puff-in-center");
 }
 
 function showPlayArea() {
   form.style.display = "none";
   controls.style.display = "block";
   playArea.style.display = "block";
+  revealArea.style.display = "block";
 }
 
 function revealKeyword(n){
@@ -61,10 +65,8 @@ function logReset(event) {
 }
 
 function revealFilm(event) {
-  revealArea.style.display = "block";
-  revealArea.innerHTML = filmName;
   revealArea.classList.add("puff-in-center");
-  revealArea.classList.add("backText");
+  filmReveal.style.visibility = "visible";
 }
 
 var keywordsDisplayed = 0;
@@ -85,6 +87,7 @@ const playArea = document.getElementById('playArea');
 const revealArea = document.getElementById('revealArea');
 const keywords = document.getElementById('keywordsField');
 const log = document.getElementById('log');
+const filmReveal = document.getElementById('filmReveal')
 
 submitButton.addEventListener('click', logSubmit);
 resetButton.addEventListener('click', logReset);

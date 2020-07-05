@@ -3,7 +3,7 @@ html{
 }
 
 body{
-        overflow-x:hidden;
+        overflow:hidden;
         background: repeating-radial-gradient(
                 circle, 
                 rgb(133,49,186),
@@ -51,6 +51,7 @@ textarea {
         resize: none;
         width: 70%;
         font-family: Helvetica;
+        font-size: 3vh;
         /* background: repeating-linear-gradient(
                 45deg,
                 rgba(60, 186, 208, 0.3),
@@ -64,6 +65,10 @@ textarea {
         ); */
 }
 
+#filmName {
+        font-size: 4vh;
+}
+
 input {
         font-family: Helvetica;
 }
@@ -73,9 +78,8 @@ input {
 }
 
 #revealArea {
-        display: none;
         text-align: center;
-        font-size: 10vh;
+        font-size: 9vh;
 }
 
 .button{
