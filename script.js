@@ -3,6 +3,14 @@ function logSubmit(event) {
   var keywords = unfilteredkeywords.filter(function(value, index, arr){ return value != "";});
   numKeywords = keywords.length;
   filmName = document.getElementById('filmName').value;
+
+  if(numKeywords == 0)
+  {
+    keywords = defaultKeywords();
+    numKeywords = keywords.length;
+    filmName = "The Prestige";
+  }
+
   var i;
   for (i = 0; i < numKeywords; i++) {
     var keywordField = document.createElement("LI");
@@ -68,6 +76,19 @@ function logReset(event) {
 function revealFilm(event) {
   revealArea.classList.add("puff-in-center");
   filmReveal.style.visibility = "visible";
+}
+
+function defaultKeywords() {
+  return ["Title Spoken By Character"
+  , "Actor Playing Dual Role"
+  , "Voice Over Narration"
+  , "Man Wears a Wig"
+  , "Diary"
+  , "No Opening Credits"
+  , "Victorian era"
+  , "Rivalry"
+  , "Human Duplication"
+  , "Magician"];
 }
 
 var keywordsDisplayed = 0;
