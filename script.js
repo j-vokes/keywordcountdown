@@ -1,5 +1,6 @@
 function logSubmit(event) {
-  var keywords = document.getElementById('keywordsField').value.split(/\r?\n/g);
+  var unfilteredkeywords = document.getElementById('keywordsField').value.split(/\r?\n/g);
+  var keywords = unfilteredkeywords.filter(function(value, index, arr){ return value != "";});
   numKeywords = keywords.length;
   filmName = document.getElementById('filmName').value;
   var i;
